@@ -1,3 +1,4 @@
+from email.policy import default
 from random import choices
 
 from django.contrib.auth.models import AbstractUser
@@ -13,17 +14,17 @@ class UserSonet(AbstractUser):
         ("other", "other"),
     )
 
-    avatar = models.ImageField(upload_to='user/avatar/')
+    first_login = models.DateTimeField(blank=True, null=True)
+    birthday = models.DateField(blank=True, null=True)
+    gender = models.CharField(max_length=7, choices=GENDER, default="Unknown")
 
-    first_login = models.DateTimeField('First login date', blank=True, null=True)
-    birthday = models.DateTimeField('Birthday date', blank=True, null=True)
-    gender  = models.CharField('Gender', max_length=6, choices=GENDER)
+    phone = models.CharField(max_length=14)
+    biography = models.TextField(max_length=500, blank=True, null=True)
 
-    phone = models.CharField('Phone number', max_length=14)
-    biography = models.TextField('User Biography', blank=True, null=True)
+    github = models.CharField(max_length=500, blank=True, null=True)
+    linkedin = models.CharField(max_length=500, blank=True, null=True)
 
-    github = models.CharField('User GitHub', max_length=500, blank=True, null=True)
-    linkedin = models.CharField('User Linkedin', max_length=500, blank=True, null=True)
+    work_place = models.CharField(max_length=150, blank=True, null=True)
+    work_position = models.CharField(max_length=150, blank=True, null=True)
 
-    work_place = models.CharField('User Work Place', max_length=150, blank=True, null=True)
-    work_position = models.CharField('User Work Position', max_length=150, blank=True, null=True)
+    avatar = models.ImageField(upload_to='user/avatar/', blank=True, null=True)
