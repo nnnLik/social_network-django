@@ -16,9 +16,6 @@ services:
       - sonet_postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
-  migration:
-    build: .
-    command: python manage.py migrate
 
 volumes:
   sonet_postgres_data:
