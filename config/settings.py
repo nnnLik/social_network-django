@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(config("DEBUG", default=1)))
+DEBUG = True
 
 #ALLOWED_HOSTS = config("DJANGO_ALLOWED_HOSTS").split(" ")
 ALLOWED_HOSTS = ['*']
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'djoser',
+    'drf_yasg',
 
     'src.profiles',
 ]
@@ -121,14 +122,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
+    'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-
-    ]
+    ),
 }
 
+
 SIMPLE_JWT = {
-    # 'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_TYPES': ('JWT',),
 }
 
 AUTH_USER_MODEL = 'profiles.UserSonet'
