@@ -1,5 +1,9 @@
 # TODO
 ## [FIX]
-...
+* Update user data route for front-end
 ## [ADD]
-* swagger 
+* posts
+* auth
+* email
+* user page
+* news feed
