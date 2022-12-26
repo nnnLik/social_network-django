@@ -6,8 +6,8 @@ from drf_yasg import openapi
 schema_view = get_schema_view(
 	openapi.Info(
 		title="SoNet API",
-		default_version='v1',
-		description="Test description",
+		default_version='v1.0.0',
+		description="social network api",
 	),
 	public=True,
 	permission_classes=[permissions.AllowAny],
