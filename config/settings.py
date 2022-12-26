@@ -3,9 +3,14 @@ Django settings for config project.
 """
 from datetime import timedelta
 
+
 from decouple import config
+import os
+
 from pathlib import Path
+
 from django.urls import path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'drf_yasg',
+    'django_cors_headers',
 
     'src.profiles',
 ]
@@ -165,3 +171,6 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = 'profiles.UserSonet'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
