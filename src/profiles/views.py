@@ -1,19 +1,21 @@
-from rest_framework.generics import RetrieveAPIView, UpdateAPIView
 from rest_framework import permissions
+from rest_framework.viewsets import ModelViewSet
+
+from .serializers import GetUserSonetSerializer, GetUserSonetPublicSerializer
 
 from .models import UserSonet
-from .serializers import GetUserSonetSerializer
 
 
-class GetUserSonetView(RetrieveAPIView):
-	"""Display user information"""
+class UserSonetPublicView(ModelViewSet):
+	"""Display user information for a public"""
 
 	queryset = UserSonet.objects.all()
-	serializer_class = GetUserSonetSerializer
+	serializer_class = GetUserSonetPublicSerializer
+	permission_classes = [permissions.AllowAny]
 
 
-class UpdateUserSonetView(UpdateAPIView):
-	"""Edit user information"""
+class UserSonetView(ModelViewSet):
+	"""Display user information"""
 
 	serializer_class = GetUserSonetSerializer
 	permission_classes = [permissions.IsAuthenticated]
