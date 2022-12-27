@@ -7,6 +7,7 @@ class GetUserSonetSerializer(serializers.ModelSerializer):
     """
     Filtered display user information
     """
+    avatar = serializers.ImageField(write_only=True)
     class Meta:
         model = UserSonet
         exclude = (
