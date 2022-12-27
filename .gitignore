@@ -31,3 +31,5 @@ build
 doc
 home.rst
 make.bat
+
+migrations/
