@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'src.profiles',
+    'src.wall',
 ]
 
 MIDDLEWARE = [
