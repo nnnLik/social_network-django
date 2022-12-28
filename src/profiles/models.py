@@ -27,4 +27,16 @@ class UserSonet(AbstractUser):
     work_place = models.CharField(max_length=150, blank=True, null=True)
     work_position = models.CharField(max_length=150, blank=True, null=True)
 
+    technology = models.ManyToManyField('Technology', related_name='users')
+
     avatar = models.ImageField(upload_to='user/avatar/', blank=True, null=True)
+
+
+
+class Technology(models.Model):
+    """All Technology"""
+
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

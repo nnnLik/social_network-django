@@ -1,6 +1,7 @@
 .idea
 idea
 .DS_Store
+.vscode
 
 *.egg-info/
 .installed.cgf
@@ -31,3 +32,5 @@ build
 doc
 home.rst
 make.bat
+
+migrations/
