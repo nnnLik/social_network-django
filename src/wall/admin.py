@@ -8,7 +8,7 @@ from src.wall.models import Post, Comment
 class PostAdmin(admin.ModelAdmin):
     """Post interface for admin"""
 
-    list_display = ("user", "published", "create_date", "moderation", "view_count", "id")
+    list_display = ("user", "published", "created_date", "moderation", "view_count", "id")
 
 
 @admin.register(Comment)
@@ -16,5 +16,4 @@ class CommentAdmin(MPTTModelAdmin, admin.ModelAdmin):
     """Comment for posts"""
     
     list_display = ("user", "post", "published", "id")
-    # actions = ['unpublish', 'publish']
     mptt_level_indent = 15
