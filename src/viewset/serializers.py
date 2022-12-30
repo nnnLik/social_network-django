@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 
-class FilterCommentListSerializer(serializers.ListSerializers):
+class FilterCommentListSerializer(serializers.ListSerializer):
     """Filter comments"""
 
     def to_representation(self, data):

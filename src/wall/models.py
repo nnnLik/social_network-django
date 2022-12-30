@@ -12,7 +12,7 @@ class Post(models.Model):
 
 	text = models.TextField(max_length=450)
 
-	create_date = models.DateTimeField(auto_now_add=True)
+	created_date = models.DateTimeField(auto_now_add=True)
 
 	published = models.BooleanField(default=True)
 
