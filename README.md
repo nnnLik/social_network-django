@@ -1,7 +1,5 @@
 # TODO
 ## [FIX]
-* Update user data route for front-end
+* wall post creating
 ## [ADD]
-* posts
-* user page
-* news feed
+* followers
