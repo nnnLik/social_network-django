@@ -9,8 +9,8 @@ class AbstractComment(models.Model):
 
     text = models.TextField(max_length=200)
 
-    create_data = models.DateTimeField(auto_now_add=True)
-    updated_data = models.DateTimeField(auto_now=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
 
     published = models.BooleanField(default=True)
     deleted = models.BooleanField(default=False)
