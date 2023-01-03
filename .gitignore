@@ -25,6 +25,7 @@ __pycache__/
 
 !*media/.gitkeep
 media/*
+*/migrations/
 
 log/debug.log
 

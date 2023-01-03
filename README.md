@@ -2,4 +2,6 @@
 ## [FIX]
 * wall post creating
 ## [ADD]
-* followers
+* user page
+* news feed
+
