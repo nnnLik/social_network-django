@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'src.wall',
     'src.comments',
     'src.followers',
+    'src.feed',
 ]
 
 MIDDLEWARE = [
