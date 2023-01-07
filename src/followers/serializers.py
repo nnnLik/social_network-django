@@ -9,4 +9,4 @@ class ListFollowerSerializer(serializers.ModelSerializer):
     subscriber = UserFollowerSerializer(many=True, read_only=True)
     class Meta:
         model = Follower
-        fields = ('subscribers',)
+        fields = ('subscriber', )
