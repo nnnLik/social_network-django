@@ -41,7 +41,7 @@ class GetUserSonetPublicSerializer(serializers.ModelSerializer):
 class UserFollowerSerializer(serializers.ModelSerializer):
     """Serializer for Follower"""
 
-    avatar = serializers.ImageField(write_only=True)
+    avatar = serializers.ImageField(read_only=True)
     class Meta:
         model = UserSonet
         fields = ('id', 'username', 'avatar')
