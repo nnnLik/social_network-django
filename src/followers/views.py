@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions, views, response
 from .models import Follower
-from .serializers import UserFollowerSerializer
+from .serializers import ListFollowerSerializer
 
 from src.profiles.models import UserSonet
 
@@ -8,10 +8,10 @@ class ListFollowerView(generics.ListAPIView):
     """Display a list of user Follower"""
 
     permission_classes = [permissions.IsAuthenticated]
-    serializer_class=UserFollowerSerializer
+    serializer_class=ListFollowerSerializer
     
     def get_queryset(self):
-        return Follower.objects.filter(self.request.user)
+        return Follower.objects.filter(user=self.request.user)
 
 
 class AddFollowerView(views.APIView):
@@ -20,11 +20,12 @@ class AddFollowerView(views.APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request, pk):
-        user = UserSonet.objects.filter(id=pk)
-        if user.exists():
-            Follower.objects.create(subscriber=request.user)
-            return response.Response(status=201)
-        return response.Response(status=404)
+        try:
+            user = UserSonet.objects.get(id=pk)
+        except Follower.DoesNotExist:
+            return response.Response(status=404)
+        Follower.objects.create(subscriber=request.user, user=user)
+        return response.Response(status=201)
 
     def delete(self, request, pk):
         try:
