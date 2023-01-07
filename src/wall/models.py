@@ -22,7 +22,8 @@ class Post(models.Model):
 
 
 	def __str__(self):
-		return f'Post by {self.user}'
+		# return f'Post by {self.user}'
+		return f'Post by {self.id}'
 
 	def comments_count(self):
 		return self.comments.count()
@@ -44,3 +45,4 @@ class Comment(AbstractComment, MPTTModel):
 
 	def __str__(self):
 		return f'{self.user} - {self.post}'
+
