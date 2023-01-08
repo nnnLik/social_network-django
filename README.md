@@ -44,36 +44,33 @@
 <h4>Installation</h4>
 
 1. Fork the [social_network-django](https://github.com/nnnLik/social_network-django) repository on Github
-1. Clone your fork to your local machine 
+1. Clone your fork to your local machine:
    ```bash
    git clone git@github.com:<yourname>/social_network-django.git
    ```
-1. Go to the project root directory 
+1. Go to the project root directory:
    ```bash
    cd social_network-django
    ```
-1. To install python dependencies create virtual env 
-  ```bash
-  python3 -m venv venv
-  ```
-  аctivate the environment
-  ```bash
-  source venv/bin/activate
-  ```
-  and install dependencies
-  ```bash
-  pip install -r requirements.txt
-1. Make migrations
-  ```bash
-  python3 manage.py makemigrations
-  python manage.py migrate
-  ```
-1. Now you can start the project
-  ```bash
-  python3 manage.py runserver
-  ```
-<br>
-You can also fill the database with test users if you need to. Just run this command
-```bash
-python3 manage.py makerecords
-```
+1. To install python dependencies create virtual env and аctivate the it:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate:
+   ```
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+1. Make migrations:
+   ```bash
+   python3 manage.py makemigrations
+   python manage.py migrate
+   ```
+1. Now you can start the project:
+   ```bash
+   python3 manage.py runserver
+   ```
+1. You can also fill the database with test users if you need to. Just run this command:
+   ```bash
+   python3 manage.py makerecords
+   ```
