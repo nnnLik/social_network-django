@@ -16,6 +16,10 @@ services:
       - sonet_postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+  pgadmin:
+    image: chorss/docker-pgadmin4
+    ports:
+      - 5050:5050
 
 volumes:
   sonet_postgres_data:

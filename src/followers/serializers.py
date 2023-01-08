@@ -6,7 +6,7 @@ from src.profiles.serializers import UserFollowerSerializer
 class ListFollowerSerializer(serializers.ModelSerializer):
     """List of Follower"""
 
-    subscriber = UserFollowerSerializer(many=True, read_only=True)
+    subscriber = UserFollowerSerializer(many=False, read_only=True)
     class Meta:
         model = Follower
         fields = ('subscriber', )
