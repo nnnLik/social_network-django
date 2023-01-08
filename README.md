@@ -74,3 +74,7 @@
    ```bash
    python3 manage.py makerecords
    ```
+<hr>
+
+P.S
+        This is only the server part of the project, now the [Client part](https://github.com/nnnLik/social-network-angular) of the social network is being developed
