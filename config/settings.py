@@ -145,7 +145,6 @@ REST_FRAMEWORK = {
 
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
-    # 'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': '#/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {},
@@ -181,3 +180,18 @@ AUTH_USER_MODEL = 'profiles.UserSonet'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8080",
+    "http://localhost:8081",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:4200",
+    "http://localhost:1313",
+    "http://localhost:4200",
+]
+
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", None)
+EMAIL_HOST = config("EMAIL_HOST", None)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", None)
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", None)
+EMAIL_PORT = config("EMAIL_PORT", None)
