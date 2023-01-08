@@ -78,3 +78,8 @@
 
 P.S
         This is only the server part of the project, now the [Client part](https://github.com/nnnLik/social-network-angular) of the social network is being developed
+
+<h2 align="center"> Thanks for visiting. </h2>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=65&section=footer"/>
+</p>
