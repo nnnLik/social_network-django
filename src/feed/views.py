@@ -1,6 +1,5 @@
 from rest_framework import generics, permissions, viewsets, response
 
-from src.viewset.classes import MixedPermission
 from src.wall.serializers import ListPostSerializer, PostSerializer
 
 from .services import feed_service
