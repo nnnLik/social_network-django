@@ -34,4 +34,3 @@ class AddFollowerView(views.APIView):
             return response.Response(status=404)
         subcriber.delete()
         return response.Response(status=204)
-
