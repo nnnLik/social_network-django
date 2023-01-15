@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'mptt',
+    'channels',
 
     'src.profiles',
     'src.wall',
@@ -195,3 +196,14 @@ EMAIL_HOST = config("EMAIL_HOST", None)
 EMAIL_HOST_USER = config("EMAIL_HOST_USER", None)
 EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", None)
 EMAIL_PORT = config("EMAIL_PORT", None)
+
+ASGI_APPLICATION = "DjangoWebSocketChat.routing.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)],
+        },
+    },
+}
