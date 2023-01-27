@@ -41,6 +41,9 @@
         <img src="https://img.shields.io/badge/Postman-FCA121?style=flat-square&logo=postman">
 </details>
 
+<h4>About</h4>
+The Social Network API project is a web application developed using the Django Rest Framework (DRF) which allows users to interact with a social network platform via an API. The project makes use of Django's models and views to handle the database and handle requests, respectively, while the DRF provides the necessary tools to easily create a RESTful API. Users can perform CRUD operations on their profiles, create and interact with posts and comments, as well as interact with other users through the API endpoints. The project also implements authentication and authorization to ensure secure access to the API. Overall, the Social Network API project allows users to interact with a social network platform in a flexible and efficient way through a RESTful API built on top of the Django web framework.
+
 <h4>Installation</h4>
 
 1. Fork the [social_network-django](https://github.com/nnnLik/social_network-django) repository on Github
